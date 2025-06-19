@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <style>
+    body {
+      background: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+    .login-container {
+      width: 300px;
+      margin: 100px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form id="loginForm" onsubmit="return validateLogin()">
+    <input type="text" id="username" placeholder="Username" />
+    <input type="text" id="DOB" plceholder="DOB" />
+    <input type="password" id="password" placeholder="Password" />
+    <input type="confirm password" id="confirm password" placeholder="confirm password" />
+    <div class="error" id="errorMsg"></div>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+  function validateLogin() {
+    const username = document.getElementById('username').value.trim();
+    const DOB = document.getElementById('DOB').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const confirm password = document.getElementById('confirm password').value.trim();
+    const errorMsg = document.getElementById('errorMsg');
+
+    if (username === "" || password === "") {
+      errorMsg.textContent = "Please enter both username and password.";
+      return false;
+    }
+
+    // For demo purposes, a hardcoded login
+    if (username === "admin" && password === "1234") {
+      alert("Login successful!");
+      return true;
+    } else {
+      errorMsg.textContent = "Invalid username or password.";
+      return false;
+    }
+  }
+</script>
+
+</body>
+</html>

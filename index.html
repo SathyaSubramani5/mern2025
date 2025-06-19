@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>3 Boxes Layout</title>
+  <style>
+    .container{
+      display:flex;
+      height: 100px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height:100vh;
+    }
+    .child{
+      padding: 10px;
+      background-color: rgb(225, 103, 27);
+      width: 400px;
+      height: 100px;
+      border-radius: 10px;
+    }
+    .center{
+      padding: 10px;
+      background-color: white;
+      width: 400px;
+      height: 100px;
+      border-radius: 10px;
+    }
+    .bottom{
+      padding: 10px;
+      background-color: green;
+      width: 400px;
+      height: 100px;
+      border-radius: 10px;
 
-    <title>Document</title>
+    }
+    .weel{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-
-    <h1>hello everyone</h1>
+  
+  <div class="container">
+  <div class="child"></div>
+  <div class="center">
+  <div class="weel">
+  <img src="flag.svg" width="100" height="100"></div>
+  </div>
+  <div class="bottom"></div>
+  
+  </div>
 </body>
 </html>
