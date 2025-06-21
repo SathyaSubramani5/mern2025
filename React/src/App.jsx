@@ -1,35 +1,47 @@
 import React from 'react'
-import Child from './component/Child.jsx'
-import Home from './pages/Home.jsx'
-import Skill from './pages/Skill.jsx'
-import Contact from './pages/Contact.jsx'
-import About from './pages/About.jsx'
-import {Route,Routes} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
+import Child from './Component/Child.jsx'
+import Home from './Pages/Home.jsx'
+import About from './Pages/About.jsx'
+import Skills from './Pages/Skills.jsx'
+import Contact from './Pages/Contact.jsx'
+import Login from './Pages/Login.jsx'
+import Counter from './Pages/Counter.jsx'
+import Navbar from './Component/Navbar.jsx'
+import State from './Hooks/State.jsx'
+import Hooks from './Pages/Hooks.jsx'
+import Effect from './Hooks/Effect.jsx'
+
 const App = () => {
-  var array = ["sathya","charu","mathi"];
-  var user = {user:"viky",password:"123456"}
+
+  var array = ['tinu', 'ram', 'don', 'moom', 'ruby'];
+  var login = { username: 'charu', password: 'charu@123' }
   return (
     <div>
-      <Child/>
-      <Home/>
+      {/* <Child name="Oliver" dept="FrontEnd Developer" contact="8976459705"/>
+      <Home items={array} user={login}/>
       <About/>
-      <Skill/>
+      <Skills/>
       <Contact/>
-
+      <Login userlogin={login}/>
+      <Counter/> */}
+      <Navbar />
+      <Routes>
+        <Route path='/home' element={<Home items={array} user={login} />} />
+        <Route path='/about' element={<About />}/>
+        <Route path='/counter' element={<Counter />}/>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/skills' element={<Skills />}/>
+        <Route path='/contact' element={<Contact/>}/>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/hooks' element={<Hooks />}/>
+        <Route path='/state' element={<State />}/>
+        <Route path='/effect' element={<Effect />}/>
+      </Routes>
 
     </div>
+
   )
 }
-<Routes>
-  <Route path='/' element={<Hom<e items = {array} user={login} />} />
-  <Route path='about' element={<About/>}/>
-  <Route path='contact' element={<Contact/>}/>
-  <Route path='Skill' element={<Skill/>}/>
-  <Route path='counter' element={<Counter/>}/>
-  <Route path='login' element={<Login/>}/>
-  <Route path='hooks' element={<Hooks/>}/>
-  <Route path='state' element={<State/>}/>
-  <Route path='about' element={<About/>}/>
-</Routes>
- 
+
 export default App
