@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 
 const Child = () => {
   return (
@@ -6,4 +6,4 @@ const Child = () => {
   )
 }
 
-export default Child
+export default Child*/
