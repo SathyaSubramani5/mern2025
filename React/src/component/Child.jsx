@@ -10,4 +10,5 @@ const Child = ({name,dept,roll,contact}) => {
     </div>
   )
 }
+
 export default Child

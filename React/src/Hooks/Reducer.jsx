@@ -1,16 +1,15 @@
-import React from 'react'
-
-const initialValue = { count: 0 };
+import React,{useReducer } from 'react'
+const initialValue = { count:0 };
 const reducerfunction = (state,action) => {
     switch(action.type) {
         case "Increment":
-            state.count=state.count + 1;
+            return {count:state.count + 1}
         case "Decrement":
-            state.count=state.count - 1;
+            return {count:state.count - 1}
         case "Reset":
-            state.count = 0;
+            return {count : 0}
         default:
-            state.count = 0;
+            return {count : 0}
     }
 }
 

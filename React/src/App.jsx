@@ -13,35 +13,34 @@ import Hooks from './Pages/Hooks.jsx'
 import Effect from './Hooks/Effect.jsx'
 
 const App = () => {
-
   var array = ['tinu', 'ram', 'don', 'moom', 'ruby'];
-  var login = { username: 'charu', password: 'charu@123' }
+  var login = { username: 'sathya', password: 'sathya@123' }
+
   return (
     <div>
-      {/* <Child name="Oliver" dept="FrontEnd Developer" contact="8976459705"/>
+      {/* <Child name="Oliver" dept="FrontEnd Developer" contact="8976459705" />
       <Home items={array} user={login}/>
       <About/>
       <Skills/>
       <Contact/>
       <Login userlogin={login}/>
       <Counter/> */}
+      
       <Navbar />
+
       <Routes>
         <Route path='/home' element={<Home items={array} user={login} />} />
-        <Route path='/about' element={<About />}/>
-        <Route path='/counter' element={<Counter />}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/skills' element={<Skills />}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/login' element={<Login />}/>
-        <Route path='/hooks' element={<Hooks />}/>
-        <Route path='/state' element={<State />}/>
-        <Route path='/effect' element={<Effect />}/>
+        <Route path='/about' element={<About />} />
+        <Route path='/counter' element={<Counter />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/skills' element={<Skills />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/hooks' element={<Hooks />} />
+        <Route path='/state' element={<State />} />
+        <Route path='/effect' element={<Effect />} />
       </Routes>
-
     </div>
-
-  )
+  );
 }
 
-export default App
+export default App;

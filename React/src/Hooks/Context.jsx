@@ -1,13 +1,14 @@
-import { createContext } from "react";
+// Context.jsx
+import { createContext, useState } from 'react';
 
-const context = createContext();
+export const Context = createContext();
 
-const UserContext = ({children})=>{
-    const user = {name:"viky",phn:"9999999999"}
-    return ( 
-        <Context.provider value={user}>
-        {children}
-        </Context.provider>
-    )
+export function ContextProvider({ children }) {
+  const [user, setUser] = useState(null);
+
+  return (
+    <Context.Provider value={{ user, setUser }}>
+      {children}
+    </Context.Provider>
+  );
 }
-export default Context
