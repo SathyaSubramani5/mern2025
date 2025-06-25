@@ -1,3 +1,4 @@
+//userModels
 const mongoose = require('mongoose');
 
 const userData = new mongoose.Schema({
@@ -6,3 +7,5 @@ const userData = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('User', userData);
+
+
